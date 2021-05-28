@@ -20,12 +20,6 @@ include("conn.php"); //Introduce to connect to the database
 
     $sql ="select * from blog where $w order by id desc limit 5";
     $query = mysqli_query($sql);
-    
-    while ($rs = mysqli_fetch_array($query)) {
-    
-    if($rs === FALSE) { 
-    die(mysql_error()); // TODO: better error handling
-}
 
 ?>
 <h2>title: <a href="view.php?id=<?php echo $rs['id']; ?>"><?php echo $rs['title']; ?></a>
