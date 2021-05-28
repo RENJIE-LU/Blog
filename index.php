@@ -22,7 +22,10 @@ include("conn.php"); //Introduce to connect to the database
     $query = mysqli_query($sql);
     
     while ($rs = mysqli_fetch_array($query)) {
-
+    
+    if($result === FALSE) { 
+    die(mysql_error()); // TODO: better error handling
+}
 
 ?>
 <h2>title: <a href="view.php?id=<?php echo $rs['id']; ?>"><?php echo $rs['title']; ?></a>
