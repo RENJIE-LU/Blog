@@ -23,7 +23,7 @@ include("conn.php"); //Introduce to connect to the database
     
     while ($rs = mysqli_fetch_array($query)) {
     
-    if($result === FALSE) { 
+    if($rs === FALSE) { 
     die(mysql_error()); // TODO: better error handling
 }
 
